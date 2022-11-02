@@ -50,7 +50,7 @@ class _MainScreenState extends State<MainScreen> {
         backgroundColor: const Color.fromARGB(255, 7, 8, 24),
         title: Text(
           titlesAppBar[_currentTab],
-          style: TextStyle(fontSize: 32, fontWeight: FontWeight.w600,color: Colors.white),
+          style: const TextStyle(fontSize: 32, fontWeight: FontWeight.w600,color: Colors.white),
         ),
         elevation: 0,
         actions: [
@@ -58,19 +58,19 @@ class _MainScreenState extends State<MainScreen> {
             onPressed: () {
 
             },
-            icon: Icon(CupertinoIcons.search),
-            color: Color.fromARGB(255, 205, 206, 209),
+            icon: const Icon(CupertinoIcons.search),
+            color: const Color.fromARGB(255, 205, 206, 209),
           )
         ],
       ),
-      backgroundColor: Color.fromARGB(255, 7, 8, 24),
+      backgroundColor: const Color.fromARGB(255, 7, 8, 24),
       bottomNavigationBar: BottomNavigationBar(
         onTap: onTabTapped,
-        backgroundColor: Color.fromARGB(255, 27, 28, 42),
+        backgroundColor: const Color.fromARGB(255, 27, 28, 42),
         type: BottomNavigationBarType.fixed,
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        selectedItemColor: Color.fromARGB(255, 0, 124, 255),
+        selectedItemColor: const Color.fromARGB(255, 0, 124, 255),
         unselectedItemColor: Colors.white,
         items: itemsNavigationBar,
         currentIndex: _currentTab,
@@ -83,12 +83,12 @@ class _MainScreenState extends State<MainScreen> {
                   snapshot.data == ConnectivityResult.wifi) {
                 return _tabs[_currentTab];
               } else {
-                return Center(
+                return const Center(
                   child: Text('No internet'),
                 );
               }
             } else {
-              return Center(
+              return const Center(
                 child: RefreshProgressIndicator(),
               );
             }
